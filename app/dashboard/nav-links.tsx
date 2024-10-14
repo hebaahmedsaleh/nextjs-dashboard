@@ -7,6 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 export default function NavLinks() {
   const pathname = usePathname();
@@ -39,7 +40,7 @@ export default function NavLinks() {
             )}
           >
             <LinkIcon className="w-6" />
-            <p className="hidden md:block">{link.name}dd</p>
+            <p className="hidden md:block">{link.name}</p>
           </Link>
         );
       })}
