@@ -81,9 +81,9 @@ export type CustomerField = {
   name: string;
   email: string;
   image_url: string;
-  total_invoices?: number;
-  total_pending?: string;
-  total_paid?: string;
+  total_invoices?: number | undefined;
+  total_pending?: string | undefined;
+  total_paid?: string | undefined;
 };
 
 export type InvoiceForm = {
