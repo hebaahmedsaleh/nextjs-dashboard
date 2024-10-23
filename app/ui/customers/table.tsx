@@ -2,10 +2,10 @@ import Image from "next/image";
 import { lusitana } from "@/app/ui/fonts";
 import Search from "@/app/ui/search";
 import { fetchCustomers } from "@/app/lib/data";
+import { CustomerField } from "@/app/lib/definitions";
 
 export default async function CustomersTable({}) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const customers: any = await fetchCustomers();
+  const customers: CustomerField[] = await fetchCustomers();
   console.log({ customers });
 
   return (
